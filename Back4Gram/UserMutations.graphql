@@ -1,0 +1,29 @@
+# Used to create a new Parse.User
+# Returns the objectId of the new Parse.User
+mutation signUpUser($username: String!, $password: String!, $email: String) {
+  users {
+    signUp(
+      fields: { username: $username, password: $password, email: $email }
+    ) {
+      objectId
+    }
+  }
+}
+
+# Used to log in a Parse.User
+# Returns the session token for the Parse.User
+mutation logInUser($username: String!, $password: String!){
+  users{
+    logIn(username: $username, password: $password){
+      sessionToken
+    }
+  }
+}
+
+# Used to log out a Parse.User
+# Returns a boolean
+mutation logOutUser{
+  users{
+    logOut
+  }
+}
