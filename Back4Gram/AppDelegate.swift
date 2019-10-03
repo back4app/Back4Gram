@@ -22,8 +22,8 @@ var myMessage = Message()
 let apollo: ApolloClient = {
     let configuration = URLSessionConfiguration.default
     configuration.httpAdditionalHeaders = [
-        "X-Parse-Application-Id": "6RLolSaDDYPpoH68sXCCPpKy061Z6kG3c6OGupzU",
-        "X-Parse-Client-Key": "AgyPyDbNPCRonxjFJ9jeZqa0Ze6nmvPZWtHeuPFt"
+        "X-Parse-Application-Id": "YourAppIdHere",
+        "X-Parse-Client-Key": "YourClientKeyHere"
     ]
     
     let url = URL(string: "https://parseapi.back4app.com/graphql")!
